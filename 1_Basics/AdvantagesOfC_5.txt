@@ -1,0 +1,13 @@
+#Adv of C:
+
+Another unique feature of the C language that is not found in many other higher-level programming languages
+
+Allows for programs to be easier to develop, easier to read, easier to modify, and easier to port to different computer systems
+
+Part of the C compilation process that recognizes special statements
+
+Analyzes these statements before analysis of the C program itself takes place
+
+An instruction to your compiler to do something before compiling the source code
+
+Could be anywhere in your code

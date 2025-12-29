@@ -1,0 +1,37 @@
+Errors in C:
+
+Compiler Errors:
+
+Programming languages have rules
+
+Syntax errors – something wrong with the structure
+
+Missing semicolon (int x = 5)
+
+printf("I am here);
+
+Semantic Errors – something wrong with the meaning
+
+a + b; // when it doesn’t make sense to add a and b
+
+###########################################################
+Linker Errors:
+
+The linker is having trouble linking all the object files together to create an executable
+
+Usually there is a library or object file that is missing
+
+
+############################
+
+Logic Errors
+
+Errors or bugs in your code that cause your program to run incorrectly
+
+Logic errors are mistakes made by the programmer
+
+Suppose we have a program that determines if a person can vote in an election and you must be 18 years or older to vote.
+
+if (age > 18) {
+    printf("Yes, you can vote!");
+}
