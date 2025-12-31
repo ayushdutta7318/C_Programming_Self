@@ -1,0 +1,76 @@
+#Enums
+
+a data type that allows a programmer to define a variable and specify the valid values that could be stored into that variable
+
+can create a variable named “myColor” and it can only contain one of the primary colors, red, yellow, or blue, and no other values
+
+you first have to define the enum type and give it a name
+
+initiated by the keyword enum
+
+then the name of the enumerated data type
+
+then a list of identifiers (enclosed in a set of curly braces) that define the permissible values that can be assigned to the type
+
+enum primaryColor { red, yellow, blue };
+
+
+variables declared to be of this data type can be assigned the values red, yellow, and blue inside the program, and no other values.
+
+Enums (cont’d)
+
+To declare a variable to be of type enum primaryColor
+
+use the keyword enum
+
+followed by the enumerated type name
+
+followed by the variable list
+
+enum primaryColor myColor, gregsColor;
+
+
+defines the two variables myColor and gregsColor to be of type primaryColor
+
+the only permissible values that can be assigned to these variables are the names red, yellow, and blue
+
+myColor = red;
+
+Another example:
+
+enum month { 
+    January, February, March, April, May, June, 
+    July, August, September, October, November, December 
+};
+
+###################################################################
+
+Enums as ints
+
+the compiler actually treats enumeration identifiers as integer constants
+
+the first name in the list is 0
+
+enum month thisMonth;
+...
+thisMonth = February;
+
+
+the value 1 is assigned to thisMonth (and not the name February) because it is the second identifier listed inside the enumeration list
+
+if you want to have a specific integer value associated with an enumeration identifier, the integer can be assigned to the identifier when the data type is defined
+
+enum direction { up, down, left = 10, right };
+
+
+an enumerated data type direction is defined with the values up, down, left, and right
+
+up = 0 because it appears first in the list
+
+down = 1 because it appears next
+
+left = 10 because it is explicitly assigned this value
+
+right = 11 because it appears immediately after left in the list
+
+###############################################################################
