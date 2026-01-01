@@ -1,0 +1,15 @@
+Type                    Constant Examples                     printf chars
+---------------------------------------------------------------------------
+char                    'a', '\n'                              %c
+_Bool                   0, 1                                   %i, %u
+short int               —                                      %hi, %hx, %ho
+unsigned short int      —                                      %hu, %hx, %ho
+int                     12, -97, 0xFFE0, 0177                  %i, %x, %o
+unsigned int            12u, 100U, 0xFFu                       %u, %x, %o
+long int                12L, -2001, 0xffffL                   %li, %lx, %lo
+unsigned long int       12UL, 100ul, 0xffeeUL                 %lu, %lx, %lo
+long long int           0xe5e5e5e5LL, 500ll                   %lli, %llx, %llo
+unsigned long long int  12ull, 0xffeeULL                      %llu, %llx, %llo
+float                   12.34f, 3.1e-5f, 0x1.5p10, 0x1p-1      %f, %e, %g, %a
+double                  12.34, 3.1e-5, 0x.1p3                 %f, %e, %g, %a
+long double             12.34l, 3.1e-51                       %Lf, %Le, %Lg
