@@ -1,0 +1,46 @@
+Overview
+
+Let’s discuss arithmetic, logical, assignment, and relational operators
+
+An arithmetic operator is a mathematical function that takes two operands and performs a calculation on them
+
+A logical operator (sometimes called a “Boolean operator”) is an operator that returns a Boolean result that’s based on the Boolean result of one or two other expressions
+
+Assignment operators set variables equal to values
+
+Assigns the value of the expression at its right to the variable at its left
+
+A relational operator will compare variables against each other
+
+Arithmetic Operators in C
+
+| Operator | Description                                                 | Example       |
+| -------- | ----------------------------------------------------------- | ------------- |
+| `+`      | Adds two operands.                                          | `A + B = 30`  |
+| `-`      | Subtracts second operand from the first.                    | `A - B = -10` |
+| `*`      | Multiplies both operands.                                   | `A * B = 200` |
+| `/`      | Divides numerator by denominator.                           | `B / A = 2`   |
+| `%`      | Modulus operator; returns remainder after integer division. | `B % A = 0`   |
+| `++`     | Increment operator increases the integer value by one.      | `A++ = 11`    |
+| `--`     | Decrement operator decreases the integer value by one.      | `A-- = 9`     |
+
+##################################################
+Logical Operators:
+
+Operator	Description	                          Example
+&&	        Called Logical AND operator.            If both the operands are non-zero, then the condition becomes true.	(A && B) is false.
+`		`
+!	Called Logical NOT operator. It is used to reverse the logical state of its operand. If a condition is true, then Logical NOT operator will make it false.
+
+
+##################################################
+
+Assignment Operators
+
+=, +=, -=, *=, /=
+
+###############################################
+
+Relational operator:
+
+>, >=, <, <=, !=, ==
