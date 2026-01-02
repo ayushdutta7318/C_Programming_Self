@@ -1,0 +1,34 @@
+Type Conversions
+
+Conversion of data between different types can happen automatically (implicit conversion) by the language or explicitly by the program.
+
+To effectively develop C programs, you must understand the rules used for the implicit conversion of floating-point and integer values in C.
+
+Normally, you shouldn’t mix types, but there are occasions when it is useful.
+
+Remember: C is flexible and gives you freedom, but do not abuse it.
+
+Whenever a floating-point value is assigned to an integer variable in C, the decimal portion of the number gets truncated.
+
+int x = 0;
+float f = 12.125;
+
+x = f;   // value stored in x is the number 12, only the int portion is stored
+
+Type Conversion (cont’d)
+
+Assigning an integer variable to a floating-point variable does not cause any change in the value of the number.
+
+The value is converted by the system and stored in the floating-point variable.
+
+When performing integer arithmetic
+
+If two operands in an expression are integers, then any decimal portion resulting from a division operation is discarded, even if the result is assigned to a floating-point variable.
+
+Mixed-type expressions
+
+If one operand is an int and the other is a float, then the operation is performed as a floating-point operation.
+
+##########################################
+
+#Type Casting: manual datatype conversion. has highest precendence

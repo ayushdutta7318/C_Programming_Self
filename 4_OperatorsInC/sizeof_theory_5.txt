@@ -1,0 +1,31 @@
+sizeof Operator
+
+You can find out how many bytes are occupied in memory by a given type by using the sizeof operator.
+
+sizeof is a special keyword in C.
+
+sizeof is actually an operator, not a function.
+
+It is evaluated at compile time, not at runtime, unless a variable-length array (VLA) is used in its argument.
+
+The argument to the sizeof operator can be:
+
+a variable
+
+an array name
+
+the name of a basic data type
+
+the name of a derived data type
+
+an expression
+
+####################################################################
+
+sizeof(int) will result in the number of bytes occupied by a variable of type int.
+
+You can also apply the sizeof operator to an expression.
+
+The result is the size of the value that results from evaluating the expression.
+
+Use the sizeof operator wherever possible to avoid having to calculate and hard-code sizes into your program.
