@@ -10,7 +10,9 @@ int main(void){
 
     int num = 25;
     int *point = &num; //& is the addressof operator, * is indirection operator
-    printf("%d\n", point);
+    printf("%p\n", point);
+    printf("%d\n", *point);
 
     return 0;
+
 }
