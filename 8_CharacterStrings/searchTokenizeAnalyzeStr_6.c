@@ -21,7 +21,7 @@ int main(void)
     char ch = 'q';
     char *pCh = NULL;
     pCh = strchr(str, ch);
-    printf("%d\n", pCh);
+    printf("%p\n", pCh);
     printf("%d\n", *pCh);
 
     //tokenizng str: sequebce of substr separated by , " ", . demlimiter.
@@ -67,5 +67,6 @@ int main(void)
     
     return 0;
 }
+
 
 //i am ayush, i am 21 year exp 30 year!!!
