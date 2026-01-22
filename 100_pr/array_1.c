@@ -1,42 +1,48 @@
 #include <stdio.h>
+#include <limits.h>
 
-//5 vla
-void readVla(void){
-    int n;
-    scanf("%d", &n);
-
-    int arr[n];
-
-    //store data in vla
-    for(int i = 0; i<n;i++){
-        arr[i] = (i+1)*3;
+void revArr(int *arr, int size)
+{
+    int left = 0, right = size - 1;
+    while (left < right)
+    {
+        // swap
+        int temp = *(arr + left);
+        *(arr + left) = *(arr + right);
+        *(arr + right) = temp;
+        left++;
+        right--;
     }
 
-    //read vla
-    for(int i = 0; i< n; i++){
-        printf("i value: %d, %d\n", i+1, arr[i]);
+    for (int i = 0; i < size; i++)
+    {
+        printf("%d ", arr[i]);
     }
+    printf("\n");
 }
 
-int main(void){
-    // What is an array in C? How is it different from variables?
-    /*Array is a data structure in which we can store multiple values in a single var. arrsy are fixed in size and datatype must be same*/
 
-    //declare array,,
-    int array[10] = {1,2,3,4,5,6,7,8,9,10};
-
-    //default value of arr el: 0
-    for(int i =0; i< 10;i++){
-        printf("%d ", array[i]);
+//2.
+int secondGreatestEl(int *arr, const int size){
+    int max1 = INT_MIN, max2 = INT_MIN;
+    //find max
+    int const *arrayEnd = arr+size;
+    for(;arr<arrayEnd;arr++){
+        if(*arr>max1){
+            max2=max1;
+            max1=*arr;
+        }else if(*arr>max2 && *arr<max1){
+            max2=*arr;
+        }
     }
-    printf("");
-    //arr index out of bounds
-    printf("%d\n", array[100]);
+    
+printf("Max: %d, 2nd Max: %d\n", max1, max2);
 
-    //vla
-    readVla();
+}
 
-    //more el than arr size
-    int a[3] = {1,2,3,4,5};
+int main(void)
+{
+    int a[5] = {1,2,3,4,5};
+    secondGreatestEl(a,5);
     return 0;
 }
