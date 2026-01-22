@@ -1,26 +1,46 @@
-/*Pointer and str*/
-
 #include <stdio.h>
-#include <string.h>
 
-void main(void){
-
-    
-    char multiple[] = "a string";
-    char *p=multiple;
-    //debug
-    printf("addr of str 1st el: %p\n", (void*)p);//print addr of str 1zt el
-    printf("addr of str 1st el: %p\n", (void*)(p+1));//----"----
-    printf("addr of str 1st el: %p\n", (void*)(p+2));//----"----
-    printf("str el 1: %c\n", *p);//print first str el
-    printf("str el 1: %c\n", *(p+1));//----"----
-    printf("str el 1: %c\n", *(p+2));//----"----
-
-    //str len
-    printf("%d\n", strlen(multiple));
-
+void copyStr_1(char to[], char from[]){
     int i;
-    for(i=0;i<strlen(multiple);i++){
-        printf("Str el number: %d, el: %c, addr: %p\n",i+1,*(p+i), (p+i));
+    for(i=0; from[i]!='\0';i++){
+        to[i] = from[i];
     }
+    to[i] = '\0';
 }
+
+void copyStr_2Pointer(char *to,char *from){
+    for(; *from!='\0';from++,to++){
+        *to = *from;
+    }
+    *to = '\0';
+}
+
+void copyStr_Optimized(char *to,char *from){
+    while(*from){//will jump out when *from ='\0', bcz '\0' points to 0.
+        *to++ = *from++;
+    }
+    *to='\0';
+}
+
+int main(void){
+    char str[] = "A string to be copied";
+    char str2[30];
+    copyStr_Optimized(str2,str);
+    return 0;
+}
+
+/*
+char arrays as pointers
+
+• if you have an array of characters called text, you could similarly define a pointer to be used to point to elements in text
+
+char *textPtr;
+
+
+• if textPtr is set pointing to the beginning of an array of chars called text
+
+++textPtr;
+
+
+• the above sets textPtr pointing to the next character in text, which is text[1]
+*/
