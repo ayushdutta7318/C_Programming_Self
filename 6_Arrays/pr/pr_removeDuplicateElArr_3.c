@@ -19,11 +19,19 @@ void removeDuplicateEl(int *arr, int size){
     printf("\n");
 
     //remove duplicate:
-    for(int i = 0; i<size;i++){
-        if(*(arr+i) == *(arr+i+1)){
-            *(arr+i) = *(arr+i+1);
+    int newSize = 1;
+    for(int i = 1; i<size;i++){
+        if(*(arr+i) != *(arr+newSize-1)){
+            *(arr+newSize) = *(arr+i);
+            newSize++;
         }
     }
+
+    for(int i = 0; i< newSize;i++){
+        printf("%d ", *(arr+i));
+    }
+    printf("\n");
+    
 }
 
 int main(void){
